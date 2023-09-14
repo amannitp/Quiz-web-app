@@ -1,25 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Quiz Web App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app">
-        <h1>Simple Quiz</h1>
-        <div class="quiz">
-            <h2 id="question">Question goes here</h2>
-            <div id="ans-buttons">
-                <button class="btn">Ans 1</button>
-                <button class="btn">Ans 2</button>
-                <button class="btn">Ans 3</button>
-                <button class="btn">Ans 4</button>
-            </div>
+      <h1>Simple Quiz</h1>
+      <div class="quiz">
+        <h2 id="question">Question goes here</h2>
+        <div id="ans-buttons">
+          <!-- <button class="btn">Ans 1</button>
+          <button class="btn">Ans 2</button>
+          <button class="btn">Ans 3</button>
+          <button class="btn">Ans 4</button> -->
         </div>
-
+        <button id="next-btn">Next</button>
+      </div>
     </div>
-    
-</body>
+
+    <!-- <script>
+      const quizQuestions = [
+        {
+          question: "Which is largest animal in the world",
+          answers: [
+            {
+              text: "shark",
+              correct: false,
+            },
+            {
+              text: "Blue whale",
+              correct: true,
+            },
+            {
+              text: "Elephant",
+              correct:false,
+            },
+            {
+              text: "Giraffe",
+              correct: false,
+            },
+          ],
+        },
+        {
+          question: "Which is smallest continent in the world",
+          answers: [
+            {
+              text: "Asia",
+              correct: false,
+            },
+            {
+              text: "Australia",
+              correct: true,
+            },
+            {
+              text: "Arctic",
+              correct:false,
+            },
+            {
+              text: "Africa",
+              correct: false,
+            },
+          ],
+        },
+        {
+          question: "Which is largest desert in the world",
+          answers: [
+            {
+              text: "kalahari",
+              correct: false,
+            },
+            {
+              text: "Gobi",
+              correct: false,
+            },
+            {
+              text: "Sahara",
+              correct:true,
+            },
+            {
+              text: "Antarctica",
+              correct: false,
+            },
+          ],
+        },
+      ];
+      const questionElement = document.getElementById("question");
+      const ansButton = document.querySelector("#ans-buttons");
+      const nextQuestion=document.querySelector('#next-btn')
+
+      let currentQuestionIndex=0;
+      let score =0;
+
+      function startQuiz(){
+        console.log(" quiz start")
+        currentQuestionIndex=0;
+        score=0;
+        sampleQuestion(currentQuestionIndex)
+       
+        showQuestion();
+        
+
+      }
+
+      function sampleQuestion(index){
+        questionElement.innerHTML=quizQuestions[index].question
+        const questionOption=document.querySelectorAll('.btn')
+        questionOption.forEach((item,idx)=>{
+            item.innerHTML=quizQuestions[index].answers[idx].text
+            item.addEventListener('click',function(e){
+                if(quizQuestions[index].answers[idx].correct===true){
+                    item.style.backgroundColor='green'
+                    item.style.color='#fff'
+                    score+=1;
+                }else{
+                    item.style.backgroundColor='red'
+                }
+            })
+        })
+        currentQuestionIndex+=1;
+      }
+      function showQuestion(){
+        nextQuestion.style.display='block'
+        nextQuestion.innerHTML="Next"
+        nextQuestion.addEventListener('click',function(e){
+            sampleQuestion(currentQuestionIndex)
+           
+            console.log(currentQuestionIndex)
+
+        })
+      }
+
+
+      startQuiz()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+    </script> -->
+
+    <!-- <script src="./quiz.js"></script> -->
+    <script src="./quiz.js"></script>
+  </body>
 </html>
